@@ -65,13 +65,5 @@ The design includes a self-checking simulation verification framework partitione
 7. High-Frequency Waveform Stressing: Alternates high-transition density patterns (0x55, 0xAA, 0x0F, 0xF0) to test tracking limits under extreme toggle rates.
 8. Phase Margin Drift Tolerance: Skews the baud rate frame windows from 320 to 324 scale metrics to verify that the mid-bit oversampling matrix successfully isolates misaligned data.
 
----
 
-## Simulation Execution
 
-```bash
-# Compile the top module and testbench
-iverilog -o sim_out UART.v Uart_transmitter_tb.v Uart_receiver_tb.v UART_tb.v
-
-# Execute the simulation binary
-./sim_out
